@@ -1,0 +1,158 @@
+// sidebar
+.side.test
+
+    //- name & position info
+    .side__head
+        .user
+            .user__image.circle
+                .bg__img.circle(style="background-image: url(/img/me.jpg)")
+
+            .user__title
+                h1.user__heading
+                    | #{personal.firstName}
+                    | #{personal.lastName}
+
+                p.user__subheading Front End Developer
+
+
+    //- personal info
+    .side__content
+
+        //- info block
+        .info-block
+            .info-block__accent-dot
+
+            //- user details
+            div.info-block__content
+
+                .user-details
+                    .user-details__head
+
+                        .heading-accent
+                            h2.heading-accent__text Personal
+                            .heading-accent__line
+
+                    //- content
+                    .user-details__content
+
+                        //- skills list
+                        ul.skills
+                            li.skills__list
+                                p.skills__title Name:
+                                p.skills__content
+                                    | #{personal.firstName}
+                                    | #{personal.lastName}
+
+                            li.skills__list
+                                p.skills__title Date of birth:
+                                p.skills__content
+                                    | #{personal.dateOfBirth.day}
+                                    | #{personal.dateOfBirth.month}
+                                    | #{personal.dateOfBirth.year}
+
+                            li.skills__list
+                                p.skills__title Nationality:
+                                p.skills__content #{personal.nationality}
+
+                            li.skills__list
+                                p.skills__title Language:
+                                p.skills__content #{personal.language.primary}, #{personal.language.secondary}
+
+                            li.skills__list
+                                p.skills__title Relationship:
+                                p.skills__content #{personal.relationship}
+
+        //- info block
+        .info-block
+            .info-block__accent-dot
+
+            //- user details
+            div.info-block__content
+
+                .user-details
+                    .user-details__head
+
+                        .heading-accent
+                            h2.heading-accent__text Contacts
+                            .heading-accent__line
+
+                    //- content
+                    .user-details__content
+
+                        //- skills list
+                        ul.skills
+                            li.skills__list
+                                p.skills__title Phone:
+                                p.skills__content #{contacts.mobile}
+
+                            li.skills__list
+                                p.skills__title Skype:
+                                p.skills__content #{contacts.skype}
+
+                            li.skills__list
+                                p.skills__title Email:
+                                p.skills__content #{contacts.email}
+
+        //- info block
+        .info-block
+            .info-block__accent-dot
+
+            //- user details
+            div.info-block__content
+
+                .user-details
+                    .user-details__head
+
+                        .heading-accent
+                            h2.heading-accent__text Personal Skills
+                            .heading-accent__line
+
+                    //- content
+                    .user-details__content
+
+                        //- skills list
+                        ul.skills
+                            - for skill in skills.personal
+
+                                li.skills__list
+                                    p.skills__title #{skill.title}:
+                                    .skills__content
+
+                                        // progress line
+                                        .progress.tooltip__trigger
+                                            .progress__base
+                                            .progress__status(data-level=skill.level)
+
+                                            // tooltip
+                                            .tooltip
+                                                p.tooltip__message #{skill.level}
+
+        //- info block
+        .info-block
+            .info-block__accent-dot
+
+            //- user details
+            div.info-block__content
+
+                .user-details
+                    .user-details__head
+
+                        .heading-accent
+                            h2.heading-accent__text Professional Skills
+                            .heading-accent__line
+
+                    //- content
+                    .user-details__content
+
+                        //- skills list
+                        ul.skills
+                            - for skill in skills.professional
+
+                                li.skills__list
+                                    p.skills__title #{skill.title}:
+                                    .skills__content
+
+                                        // progress line
+                                        .progress
+                                            .progress__base
+                                            .progress__status(data-level=skill.level)
