@@ -19,5 +19,8 @@
     "gulp-sourcemaps": "^2.6.0",
     "postcss-css-reset": "^1.0.2",
     "precss": "^1.4.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
   }
 }
