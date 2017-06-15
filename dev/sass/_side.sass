@@ -13,6 +13,7 @@
     padding-bottom: 7rem
 
     &__accent-dot
+        flex-shrink: 0
         margin: .5rem 2.5rem 0
         width: 1.5rem
         height: 1.5rem
@@ -20,25 +21,6 @@
         @extend .circle
 
     &__content
-        width: 100%
-
-// User Details
-.user-details
-    &__head
-        margin-bottom: 2rem
-
-.heading-accent
-    display: flex
-    width: 100%
-    align-items: center
-    &__text
-        flex-shrink: 0
-        margin-right: 2rem
-        font-size: 2.7rem
-
-    &__line
-        margin-right: .5rem
-        border-bottom: 3px solid $color-accent
         width: 100%
 
 // Skills List
@@ -56,7 +38,6 @@
     &__content
         margin-right: .5rem
         width: 100%
-
 
 // Progress Line
 .progress
@@ -84,40 +65,3 @@
         min-width: 0
         background: $color-accent
         border-radius: 2px
-
-
-// Tooltip
-.tooltip__trigger
-    &:hover
-        .tooltip, ~.tooltip
-            opacity: 1
-            visibility: visible
-
-
-.tooltip
-    transition: .3s all ease
-    padding: 1rem
-    position: absolute
-    top: -100%
-    left: 50%
-    transform: translate(-50%, -110%)
-    background-color: rgba(#000, .6)
-    opacity: 0
-    visibility: hidden
-    border-radius: 5px
-    filter: drop-shadow(0px 0px 5px rgba(#555 ,1))
-    pointer-events: none
-    &:after
-        content: ''
-        top: 100%
-        left: 50%
-        border: solid transparent
-        height: 0
-        width: 0
-        position: absolute
-        pointer-events: none
-
-        //border-color: transparent
-        border-top-color: rgba(#000, .6)
-        border-width: 10px
-        margin-left: -10px

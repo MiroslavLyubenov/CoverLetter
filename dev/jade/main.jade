@@ -1,1 +1,88 @@
 .main
+    //- info block
+    .info-block
+        .info-block__accent-dot
+
+        //- user details
+        div.info-block__content
+
+            .user-details
+                .user-details__head
+
+                    .heading-accent
+                        h2.heading-accent__text About Me
+                        .heading-accent__line
+
+                .user-details__content
+                    p I am curious person about many aspects of life.
+                        | This leads me from taxi driver to installation of air conditioners,
+                        | and end up with constant learning in field of web technologies.
+                        | Most of my interests are in the front-end developing and implementing designs into web pages.
+                        | So far i have work on the front-end of many interesting projects.
+                        | From landing pages, online stores, online fairs, etc.
+                        | At this point of developing my technical work stack i dive into get to know how back-end works.
+                        | And for that i decide to grab an NodeJs, add express to it, and combine them with MongoDB, as a database.
+
+    .info-block
+        .info-block__accent-dot
+
+        //- user details
+        div.info-block__content
+
+            .user-details
+                .user-details__head
+
+                    .heading-accent
+                        h2.heading-accent__text Education
+                        .heading-accent__line
+
+                - for education in educations
+                    .user-details__content.user-details__content--btm-offset
+                        h3.heading-accent__text.heading-accent__text--h3 #{education.type}
+
+                        ul.skills
+                            li.skills__list.skills__list--tighten
+                                p.skills__title.skills__title--tighten Institution:
+                                p.skills__content #{education.institution.name}
+
+                            li.skills__list.skills__list--tighten
+                                p.skills__title.skills__title--tighten Subject:
+                                p.skills__content #{education.topic}
+
+                            li.skills__list.skills__list--tighten
+                                p.skills__title.skills__title--tighten Date:
+                                if (education.endDate !== "")
+                                    p.skills__content #{education.startDate} - #{education.endDate}
+                                else
+                                    p.skills__content #{education.startDate}
+
+
+    .info-block
+        .info-block__accent-dot
+
+        //- user details
+        div.info-block__content
+
+            .user-details
+                .user-details__head
+
+                    .heading-accent
+                        h2.heading-accent__text Education
+                        .heading-accent__line
+
+                - for work in workExperience
+                    .user-details__content.user-details__content--btm-offset
+                        h3.heading-accent__text.heading-accent__text--h3 #{work.position}
+
+                        ul.skills
+                            li.skills__list.skills__list--tighten
+                                p.skills__title.skills__title--tighten Company:
+                                p.skills__content #{work.employer.name}
+
+                            li.skills__list.skills__list--tighten
+                                p.skills__title.skills__title--tighten Date:
+                                if (work.endDate !== "")
+                                    p.skills__content #{work.startDate} - #{work.endDate}
+                                else
+                                    p.skills__content #{work.startDate}
+

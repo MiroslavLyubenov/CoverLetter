@@ -37,7 +37,9 @@ gulp.task('jade', function () {
     var glob = (multipage) ? '/*.jade' : '/index.jade';
 
     return gulp.src(paths.jade + glob)
-        .pipe(jade())
+        .pipe(jade({
+            pretty: true
+        }))
         .on('error', printError)
         .pipe(gulp.dest(paths.root));
 });

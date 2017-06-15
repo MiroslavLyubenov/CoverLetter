@@ -118,12 +118,12 @@
                                     p.skills__title #{skill.title}:
                                     .skills__content
 
-                                        // progress line
+                                        //- progress line
                                         .progress.tooltip__trigger
                                             .progress__base
                                             .progress__status(data-level=skill.level)
 
-                                            // tooltip
+                                            //- tooltip
                                             .tooltip
                                                 p.tooltip__message #{skill.level}
 
@@ -152,7 +152,11 @@
                                     p.skills__title #{skill.title}:
                                     .skills__content
 
-                                        // progress line
-                                        .progress
+                                        //- progress line
+                                        .progress.tooltip__trigger
                                             .progress__base
                                             .progress__status(data-level=skill.level)
+
+                                            //- tooltip
+                                            .tooltip
+                                                p.tooltip__message #{skill.level}
