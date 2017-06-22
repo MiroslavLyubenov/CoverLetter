@@ -1,0 +1,143 @@
+{
+    "personal": {
+        "firstName": "Miroslav",
+        "lastName": "Liubenov",
+        "occupation": "Front End Developer",
+        "dateOfBirth": {
+            "day": 29,
+            "month": "April",
+            "year": 1986
+        },
+        "gender": "Male",
+        "nationality": "Bulgarian",
+        "language": {
+            "primary": "Bulgarian",
+            "secondary": "English"
+        },
+        "relationship": "In relationship"
+    },
+    "contacts": {
+        "mobile": "+359 895 828 010",
+        "skype": "liubenow",
+        "email": "m.liubenow@gmail.com"
+    },
+    "skills": {
+        "personal": {
+            "skill1": {
+                "title": "Team work",
+                "level": "70%"
+            },
+            "skill2": {
+                "title": "Organisation",
+                "level": "80%"
+            },
+            "skill3": {
+                "title": "Mentality",
+                "level": "90%"
+            },
+            "skill4": {
+                "title": "loyality",
+                "level": "95%"
+            }
+        },
+        "professional": {
+            "skill1": {
+                "title": "HTML/CSS",
+                "level": "75%"
+            },
+            "skill2": {
+                "title": "SASS",
+                "level": "80%"
+            },
+            "skill3": {
+                "title": "Jade/Pug",
+                "level": "70%"
+            },
+            "skill5": {
+                "title": "Javascript",
+                "level": "30%"
+            },
+            "skill6": {
+                "title": "jQuery",
+                "level": "35%"
+            },
+            "skill7": {
+                "title": "Gulp",
+                "level": "35%"
+            }
+        }
+    },
+    "educations": [
+        {
+            "education1": {
+                "topic": "Javascript",
+                "type": "Course",
+                "institution": {
+                    "name": "CodiCamp",
+                    "town": "Plovdiv"
+                },
+                "startDate": "October 2016",
+                "endDate": ""
+            },
+            "education2": {
+                "topic": "Javascript Basics",
+                "type": "Course",
+                "institution": {
+                    "name": "Telerik Academy",
+                    "town": "Sofia"
+                },
+                "startDate": "April 2015",
+                "endDate": ""
+            },
+            "education3": {
+                "topic": "HTML/CSS - Fast track",
+                "type": "Course",
+                "institution": {
+                    "name": "Software University",
+                    "town": "Sofia"
+                },
+                "startDate": "February 2015",
+                "endDate": ""
+            },
+            "education4": {
+                "topic": "Electric equipment in automobiles",
+                "type": "High school",
+                "institution": {
+                    "name": "N. Y. Vaptsarov",
+                    "town": "Haskovo"
+                },
+                "startDate": "2000",
+                "endDate": "2005"
+            }
+        }
+    ],
+    "workExperience": {
+        "work1": {
+            "position": "Front-end Developer",
+            "employer": {
+                "name": "WeCraft Media",
+                "town": "Plovdiv"
+            },
+            "startDate": "November 2015",
+            "endDate": "June 2017"
+        },
+        "work2": {
+            "position": "AC Installations",
+            "employer": {
+                "name": "Vimax Clima Group",
+                "town": "Plovdiv"
+            },
+            "startDate": "August 2011",
+            "endDate": "February 2013"
+        },
+        "work3": {
+            "position": "AC Installations",
+            "employer": {
+                "name": "Kilma Ekspert",
+                "town": "Plovdiv"
+            },
+            "startDate": "December 2008",
+            "endDate": "July 2011"
+        }
+    }
+}
