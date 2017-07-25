@@ -18,13 +18,58 @@
                 margin-bottom: .5rem
 
 @media (max-width: 768px)
+
+    html.presentation
+        overflow: hidden
+
+        body
+            overflow: hidden
+
+        .side__head
+            padding-top: 50%
+            position: relative
+            min-height: 100vh
+
     .container
         flex-wrap: wrap
 
     .side
         width: 100%
 
+        &__head
+            min-height: 0
 
+    .side__head, .side__content
+        transition: 1s all ease
+        background: $color-main
+
+    .container.shrink__head
+        .side__head
+            position: fixed
+            z-index: 10
+            padding: 0
+            box-shadow: 0 0 15px 0px darken($color-main, 10)
+            .user
+                text-align: center
+                padding: 1rem 2rem
+                //display: flex
+                //align-items: center
+                //justify-content: space-between
+                &__image
+                    display: inline-block
+                    margin: 0
+                    margin-right: 2rem
+                    width: 100%
+                    max-width: 6rem
+                    border-width: 2px
+
+                &__title
+                    width: auto
+                    display: inline-block
+
+
+        .side__content
+            padding-top: 19rem
     .main
         width: 100%
 
