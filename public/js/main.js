@@ -1,13 +1,12 @@
 (function () {
 
-    // get data attr
+    var viewWidth = window.innerWidth;
     var cssTransitionTime = 1000;
     var scrollFlag = false;
     var progressData = document.querySelectorAll('.progress__status');
     var elemData;
     var html = document.querySelector('html');
     var container = document.querySelector('.container');
-    var sideHead = document.querySelector('.side__head');
 
     function scroll(bool) {
         if (bool === false)
@@ -15,6 +14,11 @@
         else
             html.style.overflow = 'auto';
     }
+
+    // listen to view width
+    window.onresize = function(e) {
+        viewWidth = e.target.innerWidth;
+    };
 
     container.classList.remove('shrink__head');
     console.log(container.classList.contains('shrink__head'));
@@ -42,10 +46,11 @@
         // shrink head
         if (pagePosY > 30) {
             container.classList.add('shrink__head');
-            // scroll(true);
-            if (!scrollFlag) {
+            // disable scrolling till transition ends
+            if (!scrollFlag && viewWidth < 768) {
                 scrollFlag = true;
                 scroll(false);
+                scrollTo(document.querySelector('.side__content'), 35, 0);
                 setTimeout(function () {
                     scroll(true);
                 }, cssTransitionTime);
