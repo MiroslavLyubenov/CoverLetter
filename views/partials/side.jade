@@ -79,7 +79,7 @@
                         ul.skills
                             li.skills__list
                                 p.skills__title Phone:
-                                p.skills__content #{contacts.mobile}
+                                a(href="tel:#{contacts.mobile}").skills__content #{contacts.mobile}
 
                             li.skills__list
                                 p.skills__title Skype:
@@ -87,7 +87,7 @@
 
                             li.skills__list
                                 p.skills__title Email:
-                                p.skills__content #{contacts.email}
+                                a(href="mailto:#{contacts.email}").skills__content #{contacts.email}
 
         //- info block
         .info-block.info-block--skills
